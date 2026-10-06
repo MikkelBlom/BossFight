@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# removed from the repo by repo-cleanup.ps1, kept locally
+BossMechanic/Logs/
+BossMechanic/Library/
+BossMechanic/Temp/
+BossMechanic/UserSettings/
