@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
 
         float step = speed;
-        rb.MovePosition(new Vector2(transform.position.x + Input.GetAxis("Horizontal") * step, transform.position.y + Input.GetAxis("Vertical") * step));
+        rb.MovePosition(new Vector2(transform.position.x + Input.GetAxis("Horizontal") * step * Time.deltaTime, transform.position.y + Input.GetAxis("Vertical") * step * Time.deltaTime));
         transform.position = new Vector2(Mathf.Clamp(transform.position.x, -roomSize.x, roomSize.x), Mathf.Clamp(transform.position.y, -roomSize.y, roomSize.y));
 
         if (Input.GetKeyDown(KeyCode.Space) && state != State.dashing)
